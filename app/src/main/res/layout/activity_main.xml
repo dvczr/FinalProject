@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/main_searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_gravity="top|center"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="48dp"
+        android:fadingEdgeLength="40dp"
+        android:fadingEdge="vertical"
+        android:requiresFadingEdge="vertical"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/main_searchView_feedbackText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center"
+        android:gravity="center_horizontal|center_vertical"
+        />
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/home_navHost"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:defaultNavHost="true"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:navGraph="@navigation/my_nav" />-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/frameLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="bottom"/>-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="TODO"
+        android:layout_gravity="bottom|end"
+        app:rippleColor="@color/purple_700"
+        android:backgroundTint="#E66200EE"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="0dp"
+        app:layout_insetEdge="top">
+
+        <EditText
+            android:id="@+id/main_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add you're new task here!"
+            android:ems="19"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="50dp"
+            android:imeOptions="actionDone"
+            android:backgroundTint="@color/purple_500"/>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

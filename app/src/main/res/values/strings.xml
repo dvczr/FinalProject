@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="feedbackText">Oops!\nCouldn\'t find what you were searching after.\nPlease try again.</string>
+    <string name="popup_btnSave">SAVE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="popup_btnCancel">CANCEL</string>-->
+</resources>
